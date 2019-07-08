@@ -21,6 +21,7 @@ export default {
       this.$axios.get('http://localhost:8086/login?username='+this.username+'&&password='+this.password)
       .then((response)=>{
         if(response.success){
+          sessionStorage.setItem('loginInfo',this.username + '&&' + this.password);
           this.$router.push({ name: 'Home'})
         }
         else if(!response.success&&response.status == 1){

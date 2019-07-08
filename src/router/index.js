@@ -27,7 +27,8 @@ export default new Router({
     {
       path: '/Home',
       name: 'Home',
-      component: Home
+      component: Home,
+      meta: {requireLogin : true}
     }
   ]
 })
